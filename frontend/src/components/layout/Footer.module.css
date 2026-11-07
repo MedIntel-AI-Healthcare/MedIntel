@@ -1,0 +1,136 @@
+.footer {
+  background: linear-gradient(180deg, #FFFAF6 0%, #FFF0E9 100%);
+  border-top: 1px solid rgba(231, 111, 81, 0.18);
+  padding: 4.5rem 0 0;
+  margin-top: 4rem;
+  position: relative;
+}
+
+/* Decorative top accent line */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #E76F51 30%, #FCE7DF 60%, #E76F51 80%, transparent 100%);
+  opacity: 0.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, #FCE7DF, #FFF0E9);
+  border: 1.5px solid rgba(231, 111, 81, 0.2);
+  box-shadow: 0 2px 8px rgba(216, 95, 67, 0.1);
+}
+
+.brandName {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #E76F51;
+  letter-spacing: -0.025em;
+}
+
+.desc {
+  color: #746763;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  max-width: 280px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(231, 111, 81, 0.1);
+  color: #E76F51;
+  border: 1.5px solid rgba(231, 111, 81, 0.18);
+  transition: background 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+}
+
+.socialLink:hover {
+  background: rgba(231, 111, 81, 0.18);
+  box-shadow: 0 4px 12px rgba(216, 95, 67, 0.25);
+  transform: translateY(-2px);
+}
+
+.heading {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #292321;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.01em;
+}
+
+.link {
+  color: #746763;
+  font-size: 0.92rem;
+  transition: color 200ms ease, transform 200ms ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.link:hover {
+  color: #E76F51;
+  transform: translateX(3px);
+}
+
+.bottom {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(231, 111, 81, 0.14);
+  color: #9a8c86;
+  font-size: 0.875rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link:hover,
+  .socialLink:hover {
+    transform: none;
+    transition: none;
+  }
+}
